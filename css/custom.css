@@ -1,0 +1,143 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+header {
+    display: flex;
+    border: 1px solid green;
+}
+
+#main-nav {
+    margin: 1em 0 1em 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+#main-nav-list {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    display: flex
+}
+
+aside {
+    border: 1px solid red;
+    flex-grow: 0;
+    flex-basis: 15%;
+    min-width: 100px;
+}
+
+#side-nav {
+    padding-left: 1em;
+}
+
+#side-nav > ul > li:not(:nth-child(1)) {
+    padding-top: 10px;
+}
+
+#articles-container {
+    border: 1px solid magenta;
+    flex-grow: 4;
+    flex-basis: 85%;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+}
+
+#articles-container > article > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#articles-container > article > p {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+#articles-container > article:not(:nth-child(1)) {
+    margin-top: 1em;
+}
+
+#articles-container > article:nth-child(odd) > p {
+    padding-left: 1em;
+}
+
+#articles-container > article:nth-child(even) > p {
+    padding-right: 1em;
+}
+
+#articles-container > article:nth-child(even) > img {
+    order: 1;
+}
+
+
+footer {
+    margin-top: 1em;
+}
+
+#footer-nav {
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+#footer-nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header > img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    #main-nav-list { 
+        width: 100%;
+        flex-direction: column
+    }
+    #side-nav {
+        padding-left: 0em;
+    }
+    #side-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 200px;
+        overflow: auto;
+    }
+    #footer-nav-list {
+        flex-direction: column;
+        align-items: center
+    }
+}
+
