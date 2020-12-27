@@ -192,6 +192,13 @@ footer {
   #container {
     width: 90%;
   }
+  aside {
+    flex-basis: 20%;
+  }
+  
+  #articles-container {
+    flex-basis: 80%;
+  }
 }
 
 @media all and (max-width: 860px) {
@@ -238,7 +245,7 @@ footer {
     margin-top: 1em;
   }
   #articles-container {
-    margin-left: 0;
+    margin: 0;
   }
 
   #articles-container > article > img {
